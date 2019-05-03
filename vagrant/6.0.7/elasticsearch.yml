@@ -14,13 +14,13 @@
 #
 # Use a descriptive name for your cluster:
 #
-cluster.name: ${CLUSTER_NAME}
+cluster.name: ${ES_CLUSTER_NAME}
 #
 # ------------------------------------ Node ------------------------------------
 #
 # Use a descriptive name for the node:
 #
-node.name: ${NODE_NAME}
+node.name: ${ES_NODE_NAME}
 #
 # Add custom attributes to the node:
 #
@@ -40,7 +40,7 @@ node.name: ${NODE_NAME}
 #
 # Lock the memory on startup:
 #
-bootstrap.memory_lock: ${BOOTSTRAP_MEMORY_LOCK}
+bootstrap.memory_lock: ${ES_BOOTSTRAP_MEMORY_LOCK}
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
@@ -52,11 +52,11 @@ bootstrap.memory_lock: ${BOOTSTRAP_MEMORY_LOCK}
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: ${NETWORK_HOST}
+network.host: ${ES_NETWORK_HOST}
 #
 # Set a custom port for HTTP:
 #
-http.port: ${HTTP_PORT}
+http.port: ${ES_HTTP_PORT}
 #
 # For more information, consult the network module documentation.
 #
@@ -65,11 +65,11 @@ http.port: ${HTTP_PORT}
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
-discovery.zen.ping.unicast.hosts: ${DISCOVERY_ZEN_PING_UNICAST_HOSTS}
+discovery.zen.ping.unicast.hosts: ${ES_DISCOVERY_ZEN_PING_UNICAST_HOSTS}
 #
 # Prevent the "split brain" by configuring the majority of nodes (total number of master-eligible nodes / 2 + 1):
 #
-discovery.zen.minimum_master_nodes: ${DISCOVERY_ZEN_MINIMUM_MASTER_NODES}
+discovery.zen.minimum_master_nodes: ${ES_DISCOVERY_ZEN_MINIMUM_MASTER_NODES}
 #
 # For more information, consult the zen discovery module documentation.
 #
